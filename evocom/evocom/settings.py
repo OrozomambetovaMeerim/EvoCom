@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@gfqv(@mikkbfidw3#+l$3!!7r)(6e+tnbj1(h9wvvs_(v%64#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'evocom01.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'evocom02.herokuapp.com']
 
 
 # Application definition
