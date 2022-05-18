@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import viewsets
 
 from .serializers import About_UsSerializer, Choose_UsSerializer, Our_ServicesSerializer, ServicesSerializer,PartnersSerializer,ContactsSerializer
   
@@ -46,8 +47,8 @@ class PartnersListAPIView(APIView):
 
 
 
-class ContactsListAPIView(APIView):
-    def get(self, request, *args, **kwargs):
-        contacts = Contacts.objects.all()
-        contacts_json = ContactsSerializer(contacts, many=True)
-        return Response(data=contacts_json.data)
+class ContactsViewSet(viewsets.ModelViewSet):
+    queryset = Contacts.objects.all()
+    serializer_class = ContactsSerializer
+
+    

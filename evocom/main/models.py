@@ -66,8 +66,8 @@ class Partners(models.Model):
 
 class Contacts(models.Model):
     name = models.CharField(max_length=100)
-    phone = models.IntegerField()
-    email = models.CharField(max_length=150)
+    phone = models.CharField(max_length=14)
+    email = models.EmailField()
 
 
     def __str__(self):
